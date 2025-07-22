@@ -1,40 +1,66 @@
 # 📦 Pokémon Web Scraper
-Este projeto é um aplicativo web simples criado com FastAPI (Python) no backend e React no frontend, com o objetivo de praticar estudar conceitos de web scraping.
+
+Um aplicativo web simples que utiliza FastAPI no backend e React no frontend para praticar conceitos de **web scraping**. O projeto busca informações de Pokémons diretamente do site [pokemondb.net](https://pokemondb.net) e exibe seus dados na interface.
+
+---
 
 ## 🎯 Objetivo
-O projeto foi desenvolvido com foco educacional para aprender e aplicar técnicas de web scraping. Ele permite buscar e exibir informações de um Pokémon específico extraídas do site pokemondb.net.
+
+Este projeto tem propósito educacional, com foco em aprender e aplicar técnicas de web scraping para coletar e apresentar informações específicas de Pokémons.
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
-Backend (API)
-O backend é desenvolvido com FastAPI, utilizando as bibliotecas requests para fazer requisições HTTP, BeautifulSoup para extrair dados do HTML e uvicorn para rodar o servidor.
 
-Frontend
-O frontend é feito em React, utilizando HTML e CSS para criar a interface e comunicar-se com o backend via fetch.
+### Backend
+- **FastAPI**: framework web moderno e rápido em Python.
+- **Requests**: para realizar requisições HTTP.
+- **BeautifulSoup**: para parsear e extrair dados de páginas HTML.
+- **Uvicorn**: servidor ASGI para rodar a aplicação.
 
-## 🚀 Como Rodar Localmente
-Backend
-Crie um ambiente virtual (opcional, mas recomendado):
+### Frontend
+- **React**: biblioteca JavaScript para construir a interface.
+- **HTML & CSS**: para estruturar e estilizar o frontend.
+- Comunicação com backend via `fetch` API.
 
-- python -m venv venv
-- source venv/bin/activate  # Linux/macOS
-- venv\Scripts\activate     # Windows
-- Instale as dependências:
+---
 
-- pip install fastapi uvicorn requests beautifulsoup4
+## 🚀 Como Executar Localmente
 
-- Inicie o servidor FastAPI:
-- uvicorn main:app --reload
-O backend estará disponível em http://localhost:8000.
+### Backend
 
-Frontend
-Navegue até a pasta do frontend React e instale as dependências:
+1. (Opcional) Crie e ative um ambiente virtual:
 
-- npm install
+```bash
+python -m venv venv
+# Linux/macOS
+source venv/bin/activate
+# Windows
+venv\Scripts\activate
+```
 
-Rode o frontend:
+2. Instale as dependências:
+```bash
+pip install fastapi uvicorn requests beautifulsoup4
+```
+3. Inicie o servidor FastAPI:
+```bash
+uvicorn main:app --reload
+```
 
-- npm start
-- O React irá abrir em http://localhost:3000 e se comunicará com o backend.
+### Frontend
+1. Navegue até a pasta do frontend React:
+```bash
+cd frontend
+```
 
-## 🔍 Como Funciona a Busca
-O frontend envia o nome do Pokémon para o backend via uma requisição POST. O backend então acessa a página https://pokemondb.net/pokedex/all, faz o scraping da tabela, localiza o Pokémon pelo nome, extrai seus dados (número, tipos, stats, imagem) e retorna os dados para o frontend exibir.
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Rode a aplicação:
+```bash
+npm start
+```
+O frontend abrirá em http://localhost:3000 e se comunicará com o backend.

@@ -1,0 +1,37 @@
+.grafico-status {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #00000067;
+  border-radius: 12px;
+}
+
+.coluna-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.bloco {
+  width: 20px;
+  height: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.bloco.ativo {
+  background-color: #0400ff;
+}
+
+.label-status {
+  margin-top: 4px;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  white-space: nowrap;
+  max-width: unset;
+}
