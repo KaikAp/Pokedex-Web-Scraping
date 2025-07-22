@@ -1,4 +1,4 @@
-# 📦 Pokémon Web Scraper
+# 📦 Pokédex Web Scraper
 
 Um aplicativo web simples que utiliza FastAPI no backend e React no frontend para praticar conceitos de **web scraping**. O projeto busca informações de Pokémons diretamente do site [pokemondb.net](https://pokemondb.net) e exibe seus dados na interface.
 
